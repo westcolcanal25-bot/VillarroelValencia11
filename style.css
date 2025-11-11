@@ -51,33 +51,28 @@ body {
 
 /* * 4. MENÚ DESPLEGABLE (Funcionalidad de abrir/cerrar) */
 .nav-menu {
-    /* Menú fijo, justo debajo del header (61px de altura total) */
+    /* Configuración de posición */
     position: fixed; 
-    
-    /* CORRECCIÓN CLAVE 1: Usamos la altura total de 61px */
-    top: 61px; 
-    
+    top: 61px; /* Altura de la cabecera */
     left: 0;
     width: 100%;
+    
+    /* Estilos */
     background-color: #222; 
     z-index: 10; 
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 
-    /* CORRECCIÓN CLAVE 2: Usamos 'transform' para animación de deslizamiento */
-    
-    /* Calcular altura restante de la pantalla */
+    /* Ocultamiento y Animación */
     height: calc(100vh - 61px);
-    
-    /* Estado Cerrado: Se desliza hacia arriba, fuera de la vista */
-    transform: translateY(-100%); 
+    transform: translateY(-100%) !important; /* 🛑 CLAVE: Forzamos el ocultamiento */
     transition: transform 0.4s ease-in-out; 
     overflow-y: auto; 
 }
 
 /* CLAVE: ESTADO ABIERTO (JS añade la clase 'open') */
 .nav-menu.open {
-    /* Estado Abierto: Se desliza a su posición normal (debajo del header) */
-    transform: translateY(0); 
+    /* Mostramos el menú */
+    transform: translateY(0) !important; /* 🛑 CLAVE: Forzamos la visibilidad */
 }
 
 .store-container { padding: 0; max-width: 1200px; margin: 0 auto; }
@@ -141,4 +136,5 @@ body {
         border-bottom: none; /* Quitar bordes */
     }
 }
+
 
