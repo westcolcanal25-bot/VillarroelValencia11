@@ -1,28 +1,28 @@
 /* * 1. ESTILOS GLOBALES BÁSICOS Y CORRECCIÓN DE FIJACIÓN */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    /* CLAVE: Compensación para el encabezado fijo (61px altura total) */
-    padding-top: 61px; /* CORREGIDO: Usamos 61px que es la altura total */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    /* CLAVE: Compensación para el encabezado fijo (61px altura total del header) */
+    padding-top: 65px; 
 }
 
 /* * 2. ESTILOS DEL ENCABEZADO (NAVBAR) - FIJO */
 .navbar-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 20px;
-    background-color: #fff;
-    border-bottom: 1px solid #ccc;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    height: 45px; /* Altura de contenido */
-    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    height: 45px; /* Altura de contenido */
+    width: 100%;
 
-    /* CLAVE: Fija el encabezado al tope */
-    position: fixed; 
-    top: 0;
-    left: 0;
-    z-index: 20; 
+    /* CLAVE: Fija el encabezado al tope */
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 20; 
 }
 
 .logo-container { display: flex; align-items: center; }
@@ -30,50 +30,63 @@ body {
 
 /* * 3. ESTILOS PARA EL BOTÓN DE MENÚ HAMBURGUESA */
 .menu-button {
-    width: 24px;
-    height: 24px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 0;
-    z-index: 100; 
+    width: 24px;
+    height: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0;
+    /* CLAVE: PRIORIDAD MÁXIMA para ser visible y clicable */
+    z-index: 100; 
 }
 
 .bar {
-    width: 100%;
-    height: 2px;
-    background-color: #333;
-    border-radius: 5px;
+    width: 100%;
+    height: 2px;
+    background-color: #333; /* Color negro/gris, visible sobre fondo blanco */
+    border-radius: 5px;
 }
 
 /* * 4. MENÚ DESPLEGABLE (Funcionalidad de abrir/cerrar) */
 .nav-menu {
-    /* Configuración de posición */
-    position: fixed; 
-    top: 61px; /* Altura de la cabecera */
-    left: 0;
-    width: 100%;
-    
-    /* Estilos */
-    background-color: #222; 
-    z-index: 10; 
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    /* Menú fijo, justo debajo del header (61px de altura total) */
+    position: fixed; 
+    top: 61px; /* 45px (height) + 8px + 8px = 61px */
+    left: 0;
+    width: 100%;
+    background-color: #222; 
+    z-index: 10; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 
-    /* Ocultamiento y Animación */
-    height: calc(100vh - 61px);
-    transform: translateY(-100%) !important; /* 🛑 CLAVE: Forzamos el ocultamiento */
-    transition: transform 0.4s ease-in-out; 
-    overflow-y: auto; 
+    /* CLAVE: ESTADO CERRADO (Base) */
+    max-height: 0; 
+    overflow: hidden; 
+    transition: max-height 0.4s ease-in-out; 
 }
 
-/* CLAVE: ESTADO ABIERTO (JS añade la clase 'open') */
+/* CLAVE: ESTADO ABIERTO */
 .nav-menu.open {
-    /* Mostramos el menú */
-    transform: translateY(0) !important; /* 🛑 CLAVE: Forzamos la visibilidad */
+    max-height: 500px; 
 }
+
+.nav-menu ul { list-style: none; padding: 0; margin: 0; }
+.nav-menu li a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+    border-bottom: 1px solid #444; 
+    transition: background-color 0.3s;
+}
+.nav-menu li:last-child a { border-bottom: none; }
+.nav-menu li a:hover { background-color: #444; }
+
+
+/* --- TUS ESTILOS DE LA TIENDA (SIN CAMBIOS) --- */
 
 .store-container { padding: 0; max-width: 1200px; margin: 0 auto; }
 .store-container h2 { text-align: center; margin: 20px 0 15px 0; font-size: 24px; color: #333; padding: 0 10px; }
@@ -88,7 +101,7 @@ body {
 .price-container { display: flex; align-items: baseline; gap: 2px; margin-top: 1px; margin-bottom: 0; }
 .current-price { font-size: 16px; font-weight: bold; color: #cd0000; }
 .original-price { font-size: 12px; color: #999; text-decoration: line-through; }
-.add-to-cart { display: none; } 
+.add-to-cart { display: none; } 
 .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; height: 55px; background-color: #fff; box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); z-index: 1000; display: flex; justify-content: space-around; align-items: center; border-top: 1px solid #eee; }
 .nav-item { display: flex; flex-direction: column; align-items: center; text-decoration: none; color: #555; font-size: 10px; padding: 5px 0; flex-grow: 1; }
 .nav-icon { font-size: 20px; line-height: 1; }
@@ -99,42 +112,12 @@ body {
 /* ✨ MEDIA QUERY: OPTIMIZACIÓN Y MEJOR DISEÑO PARA PC (min-width: 768px) ✨ */
 /* -------------------------------------------------------------------------- */
 @media (min-width: 768px) {
-    .product-grid { grid-template-columns: repeat(3, 1fr); }
-    .product-card { padding: 8px; border-right: 1px solid #eee; }
-    .product-card:nth-child(2n) { border-right: 1px solid #eee; }
-    .product-card:nth-child(3n) { border-right: none; }
-    .bottom-nav { display: none; }
-    
-    /* 🛑 CORRECCIÓN PC: Mostrar la navegación horizontalmente y ocultar el botón */
-    .menu-button { 
-        display: none; /* Oculta el botón de hamburguesa */
-    }
-    
-    .nav-menu { 
-        /* Desactiva los estilos fijos de móvil */
-        position: static; 
-        height: auto;
-        transform: none; /* Desactiva la animación de JS */
-        
-        /* Estilos visuales */
-        background-color: #fff; /* Fondo blanco */
-        box-shadow: none;
-        
-        /* Posicionamiento horizontal */
-        margin-left: auto; /* Mover la navegación a la derecha del logo */
-    }
-
-    .nav-menu ul { 
-        display: flex; /* Mueve los enlaces a una línea */
-        align-items: center;
-    }
-
-    .nav-menu li a {
-        padding: 0 15px; 
-        line-height: 61px; /* Centrar verticalmente en la altura total del header */
-        color: #333; 
-        border-bottom: none; /* Quitar bordes */
-    }
+    .product-grid { grid-template-columns: repeat(3, 1fr); }
+    .product-card { padding: 8px; border-right: 1px solid #eee; }
+    .product-card:nth-child(2n) { border-right: 1px solid #eee; }
+    .product-card:nth-child(3n) { border-right: none; }
+    .bottom-nav { display: none; }
+    /* Ocultar la hamburguesa y menú desplegable en PC */
+    .menu-button { display: none; }
+    .nav-menu, .nav-menu.open { max-height: 0 !important; overflow: hidden !important; }
 }
-
-
