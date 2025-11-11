@@ -54,7 +54,7 @@ body {
     /* Menú fijo, justo debajo del header (61px de altura total) */
     position: fixed; 
     
-    /* 🛑 CORRECCIÓN CLAVE 1: Usamos la altura total de 61px */
+    /* CORRECCIÓN CLAVE 1: Usamos la altura total de 61px */
     top: 61px; 
     
     left: 0;
@@ -63,8 +63,7 @@ body {
     z-index: 10; 
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 
-    /* 🛑 CORRECCIÓN CLAVE 2: Usamos 'transform' en lugar de 'max-height' 
-        Esto es más predecible con 'position: fixed' y 'height: 100%' */
+    /* CORRECCIÓN CLAVE 2: Usamos 'transform' para animación de deslizamiento */
     
     /* Calcular altura restante de la pantalla */
     height: calc(100vh - 61px);
@@ -72,7 +71,7 @@ body {
     /* Estado Cerrado: Se desliza hacia arriba, fuera de la vista */
     transform: translateY(-100%); 
     transition: transform 0.4s ease-in-out; 
-    overflow-y: auto; /* Permite desplazamiento si hay muchos enlaces */
+    overflow-y: auto; 
 }
 
 /* CLAVE: ESTADO ABIERTO (JS añade la clase 'open') */
@@ -80,22 +79,6 @@ body {
     /* Estado Abierto: Se desliza a su posición normal (debajo del header) */
     transform: translateY(0); 
 }
-
-.nav-menu ul { list-style: none; padding: 0; margin: 0; }
-.nav-menu li a {
-    display: block;
-    padding: 15px 20px;
-    text-decoration: none;
-    color: white;
-    font-size: 1.1em;
-    border-bottom: 1px solid #444; 
-    transition: background-color 0.3s;
-}
-.nav-menu li:last-child a { border-bottom: none; }
-.nav-menu li a:hover { background-color: #444; }
-
-
-/* --- TUS ESTILOS DE LA TIENDA (SIN CAMBIOS) --- */
 
 .store-container { padding: 0; max-width: 1200px; margin: 0 auto; }
 .store-container h2 { text-align: center; margin: 20px 0 15px 0; font-size: 24px; color: #333; padding: 0 10px; }
@@ -158,3 +141,4 @@ body {
         border-bottom: none; /* Quitar bordes */
     }
 }
+
