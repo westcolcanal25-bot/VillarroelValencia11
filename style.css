@@ -123,34 +123,3 @@ body {
 
 }
 
-/* 1. Ocultar el menú por defecto (ejemplo para móvil) */
-#main-nav {
-    display: none; /* Oculta el menú por defecto */
-    position: absolute;
-    top: 100%; /* Para que aparezca debajo del encabezado */
-    width: 100%;
-    /* ... otros estilos de fondo y color ... */
-}
-
-/* 2. Mostrar el menú cuando el JavaScript añade la clase 'active' */
-#main-nav.active {
-    display: block; /* Muestra el menú cuando el botón es presionado */
-}
-
-/* 3. Estilos básicos para mostrar el botón de menú solo en móviles */
-.menu-button {
-    display: block; /* Hace que el botón de menú sea visible en móvil */
-    /* ... más estilos aquí ... */
-}
-
-/* Ocultar el botón y mostrar la navegación en pantallas grandes */
-@media (min-width: 768px) {
-    .menu-button {
-        display: none; /* Oculta el botón en escritorio */
-    }
-    #main-nav {
-        display: block; /* Muestra la navegación en escritorio */
-        position: static;
-        /* ... más estilos para la barra de escritorio ... */
-    }
-}
