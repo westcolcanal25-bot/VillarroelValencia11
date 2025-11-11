@@ -1,25 +1,15 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Obtener los elementos por su ID
     const menuToggle = document.getElementById('menu-toggle');
-    const navMenu = document.getElementById('main-nav');
+    const mainNav = document.getElementById('main-nav');
 
-    if (menuToggle && navMenu) {
-        menuToggle.addEventListener('click', function() {
-            
-            // CLAVE: Solo alternamos la clase 'open'
-            navMenu.classList.toggle('open');
-            
-            // Gestión de accesibilidad
-            const isExpanded = navMenu.classList.contains('open');
-            menuToggle.setAttribute('aria-expanded', isExpanded);
-        });
+    // 2. Escuchar el evento 'click' en el botón
+    menuToggle.addEventListener('click', () => {
+        // 3. Agregar o quitar la clase 'active' para mostrar/ocultar el menú
+        mainNav.classList.toggle('active');
         
-        // Cerrar el menú si se hace clic en un enlace
-        navMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('open');
-                menuToggle.setAttribute('aria-expanded', false);
-            });
-        });
-    }
+        // (Opcional) Agregar la clase 'open' al botón para cambiar el icono (ej. hamburguesa a 'X')
+        menuToggle.classList.toggle('open'); 
+    });
 });
 
