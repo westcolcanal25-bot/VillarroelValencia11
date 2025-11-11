@@ -112,14 +112,47 @@ body {
 /* ✨ MEDIA QUERY: OPTIMIZACIÓN Y MEJOR DISEÑO PARA PC (min-width: 768px) ✨ */
 /* -------------------------------------------------------------------------- */
 @media (min-width: 768px) {
+    /* Mantiene los estilos de la cuadrícula de productos, que están correctos */
     .product-grid { grid-template-columns: repeat(3, 1fr); }
     .product-card { padding: 8px; border-right: 1px solid #eee; }
     .product-card:nth-child(2n) { border-right: 1px solid #eee; }
     .product-card:nth-child(3n) { border-right: none; }
     .bottom-nav { display: none; }
-    /* Ocultar la hamburguesa y menú desplegable en PC */
-    .menu-button { display: none; }
-    .nav-menu, .nav-menu.open { max-height: 0 !important; overflow: hidden !important; }
+    
+    /* 1. Ocultar el botón de menú (Hamburguesa) */
+    .menu-button { 
+        display: none; 
+    }
+    
+    /* 2. Mostrar la navegación de forma horizontal en PC */
+    .nav-menu {
+        /* Desactiva los estilos fijos de móvil */
+        position: static; 
+        top: auto;
+        left: auto;
+        width: auto;
+        background-color: #fff; /* Fondo blanco para integrarse al header */
+        box-shadow: none;
 
+        /* Resuelve el conflicto de max-height: */
+        max-height: none !important; 
+        overflow: visible !important;
+        
+        /* Permite que los enlaces fluyan horizontalmente */
+        display: block; /* o flex, depende de tu estructura */
+    }
+
+    .nav-menu ul { 
+        display: flex; /* Mueve los enlaces a una línea */
+    }
+
+    .nav-menu li a {
+        display: inline-block;
+        padding: 0 15px; /* Menos padding vertical para que quepa en el header */
+        line-height: 45px; /* Centrar verticalmente en la altura del header (45px) */
+        color: #333; /* Color oscuro para PC */
+        border-bottom: none;
+    }
 }
+
 
