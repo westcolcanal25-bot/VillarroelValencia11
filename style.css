@@ -1,37 +1,86 @@
-/* ================================================================== */
-/* CSS AÑADIDO: ESTILOS PARA LA DOBLE BARRA SUPERIOR (COMO EN LA IMAGEN) */
-/* ================================================================== */
-
-/* 1. AJUSTE GLOBAL DE FIJACIÓN */
-
-/* La nueva altura total es: 30px (anuncio) + 70px (nav principal) = ~100px. */
-/* Asegúrate de que el body compense el espacio del encabezado fijo */
+/* * 1. ESTILOS GLOBALES BÁSICOS Y CORRECCIÓN DE FIJACIÓN */
 body {
-    /* Ajuste temporal. Si esto causa problemas, puedes volver a 65px y jugar con las alturas */
-    padding-top: 100px; 
+    margin: 0;
+    font-family: Arial, sans-serif;
+    /* CLAVE: Nueva compensación para el encabezado fijo (Aprox 100px en móvil) */
+    padding-top: 100px; /* 30px (anuncio) + 70px (nav) */
 }
 
-/* 2. BARRA DE ANUNCIO SUPERIOR (Morada) */
+/* * 2. ESTILOS DE TU ANTIGUA BARRA (Ahora es la barra celeste) */
+.navbar-header {
+    /* Mantenemos tus propiedades de fijación */
+    position: fixed; 
+    top: 30px; /* **AJUSTADO:** Se mueve 30px hacia abajo por la barra morada */
+    left: 0;
+    width: 100%;
+    z-index: 20;
+    
+    /* RESETEANDO ESTILOS ANTIGUOS para adoptar el nuevo look */
+    height: 70px; /* Nueva altura grande */
+    padding: 0 15px; /* Nuevo padding */
+    border-bottom: none; /* Quitamos borde inferior */
+    box-shadow: none; /* Quitamos sombra */
+    background-color: transparent; /* Transparente para usar el color del .main-header-bar-villarroel */
+}
+
+/* **CLASE AÑADIDA:** Estilos visuales de la barra celeste */
+.main-header-bar-villarroel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px; /* Nueva altura */
+    background-color: #4dc2f5; /* Color Celeste de la imagen */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 3. MENÚ HAMBURGUESA - Ajuste de posición dentro de la nueva barra */
+.menu-button {
+    /* Esto lo devuelve a su lugar a la izquierda */
+    position: relative; 
+    z-index: 100; 
+}
+
+.bar { background-color: black; } /* Líneas negras */
+
+
+/* 4. MENÚ DESPLEGABLE (Funcionalidad de abrir/cerrar) */
+.nav-menu {
+    /* Menú fijo, ahora justo debajo de la doble barra (30px + 70px) */
+    position: fixed; 
+    top: 100px; /* **AJUSTADO:** 30px (anuncio) + 70px (nav) = 100px */
+    left: 0;
+    width: 100%;
+    background-color: #222; 
+    z-index: 10; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+
+    /* Mantenemos tus estados originales */
+    max-height: 0; 
+    overflow: hidden; 
+    transition: max-height 0.4s ease-in-out; 
+}
+
+/* 5. BARRA DE ANUNCIO SUPERIOR (Morada) - CÓDIGO NUEVO */
 .top-anuncio-bar {
     display: flex;
-    justify-content: center; /* Centra el texto */
+    justify-content: center;
     align-items: center;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 30px; /* Altura de la barra morada */
-    background-color: #6a1b9a; /* Color Morado de la imagen */
+    height: 30px; 
+    background-color: #6a1b9a; /* Color Morado */
     color: white;
     font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
-    z-index: 21; /* Z-index mayor que la barra principal para asegurar que esté en el tope */
+    z-index: 21; 
 }
 
 .anuncio-texto {
     margin: 0;
-    flex-grow: 1; /* Permite que el texto ocupe espacio central */
+    flex-grow: 1;
     text-align: center;
 }
 
@@ -42,49 +91,14 @@ body {
     font-size: 24px;
     line-height: 1;
     cursor: pointer;
-    padding: 0 15px; /* Espacio a la derecha del botón 'X' */
+    padding: 0 15px;
     position: absolute;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
 }
 
-/* 3. BARRA DE NAVEGACIÓN PRINCIPAL (Celeste) */
-.main-header-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 30px; /* Coloca esta barra justo debajo de la barra morada de 30px */
-    left: 0;
-    width: 100%;
-    height: 70px; /* Altura de la barra celeste */
-    background-color: #4dc2f5; /* Color Celeste de la imagen */
-    padding: 0 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 20;
-}
-
-/* 4. ESTILOS DE COMPONENTES INTERNOS */
-
-/* Menú Hamburguesa (Reutilizamos la clase .bar, solo cambiamos el contenedor) */
-.menu-hamburguesa-btn {
-    width: 30px;
-    height: 30px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 0;
-}
-
-.menu-hamburguesa-btn .bar {
-    background-color: black; /* Las líneas son negras en la imagen */
-}
-
-/* Logo */
+/* 6. LOGO Y CARRITO (Nuevas reglas) */
 .logo-container-nuevo {
     /* Centrar el logo en la barra */
     position: absolute;
@@ -96,64 +110,49 @@ body {
 }
 
 .logo-feastables {
-    /* Ajusta el tamaño del logo para que se vea bien en la barra de 70px */
-    max-height: 80%; 
+    max-height: 80%; /* Asegura que no se salga de la barra de 70px */
     width: auto;
 }
 
-/* Carrito de Compras */
 .carrito-icon-link {
     position: relative;
-    color: black; /* Icono negro */
+    color: black; 
     text-decoration: none;
     padding: 10px;
-    margin-left: auto; /* Empuja el carrito a la derecha si es necesario */
+    /* Esto lo empuja a la derecha de todo el contenido */
+    margin-left: auto; 
+    z-index: 100; /* Asegura que esté por encima de la lista de navegación */
 }
 
 .carrito-svg {
     width: 30px;
     height: 30px;
-    stroke: black; /* Color de la línea del SVG */
+    stroke: black; 
 }
 
 .contador-carrito {
-    /* Estilo del "0" negro */
     position: absolute;
-    top: 8px; /* Ajusta la posición vertical */
-    right: 8px; /* Ajusta la posición horizontal */
+    top: 8px;
+    right: 8px;
     font-size: 10px;
     font-weight: bold;
     color: black;
     line-height: 1;
 }
 
-/* 5. LIMPIEZA DE CLASES ANTIGUAS */
-
-/* Ocultar la navegación original que estaba dentro del header antiguo */
-/* Asumo que ya no necesitas la lista de enlaces tradicional que tenías oculta, 
-   ya que ahora usarás un menú lateral si el usuario presiona el botón hamburguesa */
-.nav-menu {
-    /* Debe estar debajo de ambas barras */
-    top: 100px; /* 30px (anuncio) + 70px (nav) = 100px */
-}
-
-/* Las siguientes reglas anulan tu antiguo header si quieres limpiar el CSS: */
-/*
-.navbar-header, .logo-container, .logo-text, .menu-button {
-    display: none; 
-}
-*/
-
-
-/* 6. AJUSTE EN MEDIA QUERY PARA PC (min-width: 768px) */
+/* -------------------------------------------------------------------------- */
+/* ✨ MEDIA QUERY: OPTIMIZACIÓN Y MEJOR DISEÑO PARA PC (min-width: 768px) ✨ */
+/* -------------------------------------------------------------------------- */
 @media (min-width: 768px) {
-    /* Asegurar que la barra superior se vea bien en desktop, manteniendo la altura */
+    /* AJUSTE PARA PC */
     .top-anuncio-bar { height: 35px; font-size: 16px; }
-    .main-header-bar { top: 35px; height: 80px; }
+    .navbar-header { top: 35px; height: 80px; }
     body { padding-top: 115px; /* 35px + 80px */ }
     
-    /* En desktop, generalmente no se oculta el menú, pero si solo quieres la barra como en la imagen, esto está bien */
-    .menu-hamburguesa-btn { display: none; } 
-    
-    /* Si quieres que la lista de navegación original vuelva a aparecer en PC (como links), tendrías que reescribir esta sección */
+    /* Ocultar la hamburguesa y menú desplegable en PC (manteniendo tu regla original) */
+    .menu-button { display: none; }
+    /* Si quieres reusar tu lista de navegación en PC, tendrías que modificar .nav-menu aquí */
+    .nav-menu, .nav-menu.open { max-height: 0 !important; overflow: hidden !important; }
+
+    /* Como la lista de enlaces de navegación no está visible en PC, el logo se queda centrado */
 }
