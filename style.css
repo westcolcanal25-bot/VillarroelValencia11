@@ -29,11 +29,15 @@ body {
 }
 
 .anuncio-texto {
-    margin: 0;
-    flex-grow: 1;
-    text-align: center;
-    /* Padding para dejar espacio al botón X si está en el HTML */
-    padding-right: 40px; 
+    /* Mantenemos margin: 0; */
+    margin: 0; 
+    
+    /* Centrado Horizontal directo */
+    text-align: center; 
+    
+    /* Eliminamos flex-grow y padding-right que causaban el desplazamiento */
+    /* Lo mantenemos simple para que el contenedor lo centre */
+    /* Puedes borrar la propiedad flex-grow si la tenías antes */
 }
 
 .anuncio-cerrar-btn {
@@ -239,4 +243,5 @@ body {
     .menu-button { display: none; }
     .nav-menu, .nav-menu.open { max-height: 0 !important; overflow: hidden !important; }
 }
+
 
