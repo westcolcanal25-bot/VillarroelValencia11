@@ -548,17 +548,22 @@ body {
 
 
 .store-container h2 {
-    /* Nueva fuente y estilo */
-    font-family: 'Poppins', sans-serif; /* CLAVE: Aplica la nueva fuente */
-    font-weight: 800; /* Hace la fuente más gruesa y destacada */
-    text-transform: uppercase; /* Opcional: para que se vea más audaz */
-    line-height: 1.1; /* Reduce el espacio entre las dos líneas */
+    /* Nueva fuente y estilo más audaz */
+    font-family: 'Anton', sans-serif; /* CLAVE: Nueva fuente impactante */
+    font-weight: 400; /* La fuente Anton es solo gruesa (400) */
+    text-transform: uppercase;
     
-    /* Propiedades de centrado que ya tenías */
+    /* Ajustes visuales */
+    font-size: 32px; /* Un poco más grande para impactar */
+    color: #111; /* Negro profundo */
+    
+    /* Espaciado: Hace las líneas más cercanas para un look compacto */
+    line-height: 1.05; 
+    margin: 30px auto; /* Centra y ajusta margen */
+    max-width: 400px; /* Limita el ancho en el centro */
+    
     text-align: center;
-    margin: 20px 0 30px 0; /* Agregamos más margen abajo */
-    font-size: 28px; /* Un poco más grande para destacar */
-    color: #333;
     padding: 0 10px;
 }
+
 
