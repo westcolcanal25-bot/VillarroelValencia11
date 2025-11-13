@@ -12,31 +12,39 @@
         <p class="anuncio-texto">ENVIO A TODA VENEZUELA</p>
     </div>
 
-    <header class="main-header-bar-villarroel">
+    <header class="navbar-header main-header-bar-villarroel">
+    
+    <button class="menu-button" id="menu-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </button>
+    
+    <div class="logo-container-nuevo">
+        <img src="img/Logo Feastables" alt="Logo Feastables" class="logo-feastables">
+    </div>
+
+    <a href="#" class="carrito-icon-link">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="carrito-svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+        </svg>
+        <span class="contador-carrito">0</span>
+    </a>
+    
+    <nav id="main-nav" class="nav-menu">
         
-        <button class="menu-button" id="menu-toggle">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+        <button class="menu-cerrar-btn" id="close-nav-btn">
+            &times;
         </button>
         
-        <div class="logo-container-nuevo">
-            <img src="img/Logo Feastables" alt="Logo Feastables" class="logo-feastables">
-        </div>
-
-        <a href="#" class="carrito-icon-link">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="carrito-svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
-            </svg>
-            <span class="contador-carrito">0</span>
-        </a>
+        <ul>
+            <li><a href="">Productos Destacados</a></li>
+            <li><a href="#ofertas">Ofertas Exclusivas</a></li>
+            <li><a href="https://Wa.me/+584244492789?text=Hola,+me+gustaría+hacer+una+consulta">Consultar por WhatsApp</a></li>
+            <li><a href="#contacto">Ubicación y Contacto</a></li>
+        </ul>
         
-        <nav id="main-nav" class="nav-menu">
-             <button class="menu-cerrar-btn" id="close-nav-btn">&times;</button>
-             <ul>
-                 <li><a href="">Productos Destacados</a></li>
-                 </ul>
-        </nav>
+    </nav>
     </header>
     <main class="store-container">
         <h2>Nuestros Productos Destacadosssssssss</h2>
@@ -319,6 +327,7 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
