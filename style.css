@@ -477,7 +477,7 @@ body {
 
 
 /* =========================================== */
-/* ESTILOS DEL BOTÓN DE WHATSAPP FLOTANTE - ¡EFECTO MEJORADO! */
+/* ESTILOS DEL BOTÓN DE WHATSAPP FLOTANTE - ¡APLICACIÓN FORZADA! */
 /* =========================================== */
 .whatsapp-float {
     position: fixed;
@@ -494,36 +494,33 @@ body {
     /* Sombra Inicial para que destaque siempre */
     box-shadow: 0px 4px 12px rgba(0,0,0,0.4); 
     
-    z-index: 1000;
+    z-index: 9999 !important; /* Aseguramos la capa de apilamiento más alta */
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
     
-    /* Transición más detallada para todos los efectos */
-    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Transición suave y elástica */
+    /* CLAVE: Transición debe estar en el estado normal */
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important; 
 }
 
 .whatsapp-float:hover {
-    /* EFECTO DE MOVIMIENTO Y SOMBRA AL PASAR EL MOUSE */
-    transform: scale(1.15) translateY(-8px); /* Más grande y sube más */
+    /* MOVIMIENTO FORZADO */
+    transform: scale(1.15) translateY(-8px) !important; /* Más grande y sube más */
     
-    /* Sombra más grande y más pronunciada, como si "flotara" más alto */
-    box-shadow: 0px 12px 25px rgba(0,0,0,0.5); 
+    /* SOMBRA FORZADA */
+    box-shadow: 0px 12px 25px rgba(0,0,0,0.5) !important; 
     
-    background-color: #2fb960; /* Ligeramente más claro al hacer hover */
+    background-color: #2fb960 !important; /* Ligeramente más claro al hacer hover */
 }
 
-/* Ajuste para dispositivos móviles si la barra inferior interfiere */
+/* Ajuste para dispositivos móviles (mantenido) */
 @media (max-width: 767px) {
     .whatsapp-float {
         bottom: 75px; 
-        right: 15px;
-        width: 55px; 
-        height: 55px;
-        font-size: 28px;
     }
 }
+
 
 
 
