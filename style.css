@@ -101,14 +101,19 @@ body {
     border-radius: 5px;
 }
 
-/* * 5. LOGO Y CARRITO */
 .logo-container-nuevo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    /* Mantendremos position absolute para que el flex no lo fuerce demasiado */
+    position: absolute; 
+    
+    /* ¡CLAVE PARA EL CENTRADO HORIZONTAL! */
+    left: 50%; /* Lo mueve al 50% del ancho del padre */
+    transform: translateX(-50%); /* Lo mueve hacia la izquierda la mitad de su propio ancho */
+    
     height: 100%;
     display: flex;
     align-items: center;
+    
+    /* Aseguramos un z-index adecuado para que esté por encima de la barra */
     z-index: 100;
 }
 
@@ -246,6 +251,7 @@ body {
     .menu-button { display: none; }
     .nav-menu, .nav-menu.open { max-height: 0 !important; overflow: hidden !important; }
 }
+
 
 
 
