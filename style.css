@@ -52,38 +52,40 @@ body {
 
 /* * 4. MENÚ DESPLEGABLE (Funcionalidad de abrir/cerrar) */
 .nav-menu {
-    /* Menú fijo, justo debajo del header (61px de altura total) */
-    position: fixed; 
-    top: 61px; /* 45px (height) + 8px + 8px = 61px */
-    left: 0;
-    width: 100%;
-    background-color: #222; 
-    z-index: 10; 
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    /* (Mantén el top: 100px que ya ajustamos) */
+    position: fixed; 
+    top: 100px; /* 30px (anuncio) + 70px (nav) */
+    left: 0;
+    
+    /* ESTILOS CLAVE PARA EL MENÚ LATERAL: */
+    width: 80%; /* Ocupa el 80% de la pantalla */
+    max-width: 300px; /* Ancho máximo para desktop/tablet */
+    height: calc(100vh - 100px); /* Ocupa el 100% del alto visible MENOS la barra fija de 100px */
+    overflow-y: auto; /* Permite scroll solo en el menú si los elementos exceden la altura */
+    
+    background-color: #fff; /* Fondo blanco (como se ve en tu imagen) */
+    z-index: 100; /* Alto para estar por encima del contenido */
+    box-shadow: 4px 0 8px rgba(0,0,0,0.3);
 
-    /* CLAVE: ESTADO CERRADO (Base) */
-    max-height: 0; 
-    overflow: hidden; 
-    transition: max-height 0.4s ease-in-out; 
+    /* ESTADO CERRADO: Usamos transform para OCULTARLO */
+    transform: translateX(-100%); /* Lo oculta fuera de la pantalla a la izquierda */
+    transition: transform 0.4s ease-in-out; 
 }
 
-/* CLAVE: ESTADO ABIERTO */
+/* CLAVE: ESTADO ABIERTO (El JS añade esta clase) */
 .nav-menu.open {
-    max-height: 500px; 
+    /* Mueve el menú a su posición visible */
+    transform: translateX(0);
 }
 
-.nav-menu ul { list-style: none; padding: 0; margin: 0; }
+/* Además, ajusta los estilos de los enlaces para que sean visibles sobre el fondo blanco */
 .nav-menu li a {
-    display: block;
-    padding: 15px 20px;
-    text-decoration: none;
-    color: white;
-    font-size: 1.1em;
-    border-bottom: 1px solid #444; 
-    transition: background-color 0.3s;
+    color: #333; /* Cambiar el color a negro/gris oscuro */
+    border-bottom: 1px solid #eee; /* Borde más sutil */
 }
-.nav-menu li:last-child a { border-bottom: none; }
-.nav-menu li a:hover { background-color: #444; }
+.nav-menu li a:hover { 
+    background-color: #f5f5f5; /* Hover sutil */
+}
 
 
 /* --- TUS ESTILOS DE LA TIENDA (SIN CAMBIOS) --- */
@@ -121,3 +123,4 @@ body {
     .menu-button { display: none; }
     .nav-menu, .nav-menu.open { max-height: 0 !important; overflow: hidden !important; }
 }
+
