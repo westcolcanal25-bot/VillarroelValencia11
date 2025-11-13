@@ -30,17 +30,17 @@ body {
 
 /* * 3. ESTILOS PARA EL BOTÓN DE MENÚ HAMBURGUESA */
 .menu-button {
-    width: 24px;
-    height: 24px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 0;
-    /* CLAVE: PRIORIDAD MÁXIMA para ser visible y clicable */
-    z-index: 100; 
+    width: 24px;
+    height: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0;
+    /* CORRECCIÓN: Aumentar el z-index para garantizar el clic */
+    z-index: 1000; /* ¡Cambiado de 25 a 1000! */
 }
 
 .bar {
@@ -169,6 +169,7 @@ body {
     height: calc(100vh - 100px); 
     overflow-y: auto; /* Permite scroll si la lista es larga */
 }
+
 
 
 
