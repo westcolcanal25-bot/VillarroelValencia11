@@ -413,6 +413,29 @@ body {
 }
 
 
+/* =========================================== */
+/* NUEVOS ESTILOS: COLORES DE MARCA PERMANENTES */
+/* =========================================== */
+
+/* Estilos de fondo para los iconos en estado normal */
+.social-icon-box.instagram {
+    /* Gradiente que simula el logo de Instagram */
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    border-color: transparent; /* Hacemos el borde transparente */
+    color: white; /* El ícono interior es blanco para contraste */
+}
+
+.social-icon-box.facebook {
+    background-color: #3b5998; /* Azul de Facebook */
+    border-color: #3b5998;
+    color: white;
+}
+
+.social-icon-box.tiktok {
+    background-color: #000000; /* Negro de TikTok */
+    border-color: #000000;
+    color: white;
+}
 
 
 
