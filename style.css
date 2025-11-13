@@ -50,22 +50,22 @@ body {
     z-index: 26;
 }
 
-/* * 3. BARRA DE NAVEGACIÓN PRINCIPAL (CELESTE/BLANCA) */
+/* * 3. BARRA DE NAVEGACIÓN PRINCIPAL (BLANCA) */
 .main-header-bar-villarroel {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 70px; /* Altura de la barra celeste */
+    height: 70px;
     
-    /* DISEÑO VISUAL (Asumo que quieres un fondo celeste, si quieres blanco, cambia el color) */
-    background-color: #4dc2f5; 
-    border-bottom: 1px solid #ccc;
+    /* CAMBIO CLAVE: Fondo Blanco */
+    background-color: white; /* O usa el código hexadecimal #ffffff */
+    border-bottom: 1px solid #ccc; /* Añade un borde gris para separarla del contenido */
     padding: 0 15px;
 
-    /* POSICIONAMIENTO FIJO */
+    /* ... (resto del posicionamiento fijo) ... */
     position: fixed;
-    top: 30px; /* ¡CLAVE! Comienza debajo de la barra morada de 30px */
+    top: 30px; 
     left: 0;
     z-index: 20; 
 }
@@ -239,3 +239,4 @@ body {
     .menu-button { display: none; }
     .nav-menu, .nav-menu.open { max-height: 0 !important; overflow: hidden !important; }
 }
+
