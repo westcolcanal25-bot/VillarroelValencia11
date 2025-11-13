@@ -37,17 +37,9 @@ body {
 
 /* * 3. ESTILOS PARA EL BOTÓN DE MENÚ HAMBURGUESA */
 .menu-button {
-    width: 24px;
-    height: 24px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 0;
-    /* CORRECCIÓN: Aumentar el z-index para garantizar el clic */
-    z-index: 1000; /* ¡Cambiado de 25 a 1000! */
+    /* ... otros estilos ... */
+    position: relative; 
+    z-index: 1000; /* Debe ser lo más alto para capturar el clic */
 }
 
 .bar {
@@ -234,5 +226,6 @@ body {
     /* Z-INDEX ALTO (Aseguramos que esté por encima del contenido) */
     z-index: 20;
 }
+
 
 
