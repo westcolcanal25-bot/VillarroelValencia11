@@ -365,12 +365,16 @@ body {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* EFECTO HOVER: Zoom, Sombra y Cambio de Color */
+/* AJUSTE DEL EFECTO HOVER */
 .social-icon-box:hover {
     transform: scale(1.15); /* Zoom ligero */
-    box-shadow: 0 0 15px rgba(255, 0, 127, 0.8); /* Sombra brillante */
-    color: white;
+    /* Mantenemos el box-shadow para que haya un efecto de "brillo" */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); 
+    color: white; 
+    /* ¡IMPORTANTE! Quita cualquier background-color de los :hover si lo tenías */
 }
+
+/* También puedes eliminar o comentar todas las reglas de .social-icon-box.instagram:hover, .facebook:hover, etc., si no quieres que cambien de color al hacer hover. */
 
 /* Colores Individuales en Hover para un toque extra */
 .social-icon-box.instagram:hover {
@@ -436,6 +440,7 @@ body {
     border-color: #000000;
     color: white;
 }
+
 
 
 
