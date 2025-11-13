@@ -288,11 +288,11 @@ body {
 
 
 /* =========================================== */
-/* ESTILOS DEL PIE DE PÁGINA (FOOTER) */
+/* ESTILOS DEL PIE DE PÁGINA LLAMATIVO (FOOTER) */
 /* =========================================== */
 .main-footer {
-    background-color: #333; /* Fondo gris oscuro */
-    color: white;
+    background-color: #1c1c1c; /* Fondo más oscuro y moderno */
+    color: #f0f0f0; /* Letras claras */
     padding-top: 30px;
     font-family: Arial, sans-serif;
 }
@@ -312,13 +312,13 @@ body {
 }
 
 .footer-heading {
-    font-size: 1.2em;
+    font-size: 1.3em;
     margin-top: 0;
     margin-bottom: 15px;
-    color: #4dc2f5; /* Color celeste para los títulos */
+    color: #ff007f; /* Color de acento llamativo (Fucsia) */
 }
 
-/* Estilos de la lista (Navegación) */
+/* --- Estilos de Navegación y Contacto --- */
 .footer-col ul {
     list-style: none;
     padding: 0;
@@ -338,29 +338,64 @@ body {
 
 .footer-col ul li a:hover,
 .footer-col-contact p a:hover {
-    color: #fff;
+    color: #ff007f; /* Color llamativo al pasar el mouse */
 }
 
-/* Estilos para Redes Sociales */
-.social-icons a {
-    display: inline-block;
+/* --- Estilos de Iconos de Redes Sociales y Efecto de Movimiento --- */
+
+.social-icons {
+    display: flex;
+    gap: 15px; /* Espacio entre iconos */
+}
+
+.social-icon-box {
+    /* Estilos base del icono circular */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 50%; /* Forma circular */
     color: white;
-    background-color: #555;
-    padding: 5px 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    border-radius: 4px;
+    font-size: 20px;
     text-decoration: none;
-    font-size: 0.9em;
+    
+    /* CLAVE DEL EFECTO: Transición suave */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Barra de derechos de autor (parte inferior) */
+/* EFECTO HOVER: Zoom, Sombra y Cambio de Color */
+.social-icon-box:hover {
+    transform: scale(1.15); /* Zoom ligero */
+    box-shadow: 0 0 15px rgba(255, 0, 127, 0.8); /* Sombra brillante */
+    color: white;
+}
+
+/* Colores Individuales en Hover para un toque extra */
+.social-icon-box.instagram:hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+    border-color: #d6249f;
+}
+
+.social-icon-box.facebook:hover {
+    background-color: #3b5998;
+    border-color: #3b5998;
+}
+
+.social-icon-box.tiktok:hover {
+    background-color: #000000;
+    border-color: #000000;
+}
+
+
+/* --- Barra de derechos de autor (parte inferior) --- */
 .footer-bottom {
     text-align: center;
     padding: 15px 20px;
-    border-top: 1px solid #444; /* Línea separadora */
+    border-top: 1px solid #444;
     margin-top: 15px;
-    background-color: #222; /* Un gris más oscuro para la barra de abajo */
+    background-color: #111; /* Un gris aún más oscuro */
 }
 
 .footer-bottom p {
