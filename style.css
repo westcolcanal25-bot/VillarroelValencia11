@@ -229,3 +229,38 @@ body {
 
 
 
+
+/* 1. Resetear el logo (Tu imagen del logo estaba siendo tratada como texto) */
+.logo-text { 
+    /* Esta clase ya no se usa, pero si existe, ocúltala o bórrala */
+    display: none;
+}
+.logo-container {
+    /* Si esta clase todavía existe en el HTML, elimínala para que no interfiera */
+    display: none; 
+}
+
+
+/* 2. Asegurar que los enlaces SOLO se muestren dentro del menú lateral */
+
+/* Quitamos los estilos de tu antiguo menú fijo (ul) que se estaban filtrando */
+/* Las siguientes reglas deberían estar cerca de la sección 4 de tu CSS */
+.nav-menu ul { 
+    list-style: none; 
+    padding: 0; 
+    /* Margen desde arriba para dejar espacio al botón 'X' */
+    margin: 50px 0 0 0; 
+}
+/* Aseguramos que la lista se muestre solo dentro del nav-menu */
+.nav-menu ul li {
+    display: block;
+}
+
+
+/* 3. Reajuste de Altura del Menú Lateral (Importante si el contenido es mucho) */
+
+.nav-menu {
+    /* Esto lo asegura. Usar 'calc' es clave aquí. */
+    height: calc(100vh - 100px); 
+    overflow-y: auto; /* Permite scroll si la lista es larga */
+}
