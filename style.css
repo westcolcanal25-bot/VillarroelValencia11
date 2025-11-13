@@ -124,3 +124,18 @@ body {
     .nav-menu, .nav-menu.open { max-height: 0 !important; overflow: hidden !important; }
 }
 
+/* Estilo para el botón de cerrar dentro del menú lateral */
+.menu-cerrar-btn {
+    position: absolute;
+    top: 5px; /* Pequeño espacio desde arriba */
+    left: 5px; /* Pequeño espacio desde la izquierda */
+    background: none;
+    border: none;
+    color: #333; /* Color oscuro */
+    font-size: 28px;
+    font-weight: 300;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 101; /* Alto z-index para que sea clicable */
+}
+
