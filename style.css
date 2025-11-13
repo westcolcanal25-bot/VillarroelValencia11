@@ -349,13 +349,35 @@ body {
 }
 
 .social-icon-box {
-    /* ... (mantener propiedades de display, width, height, border-radius, font-size, etc.) ... */
+
+    /* Estilos base del icono circular */
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    width: 40px;
+
+    height: 40px;
+
+    border: 2px solid white;
+
+    border-radius: 50%; /* Forma circular */
+
+    color: white;
+
+    font-size: 20px;
+
+    text-decoration: none;
+
     
-    /* Asegurar la transición */
-    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Transición más elástica y visible */
-    
-    /* Asegúrate de que no haya un 'color: white;' aquí, ya que los colores de fondo lo definen */
-    /* El 'color: white;' lo estamos definiendo en los estilos de marca individuales ahora */
+
+    /* CLAVE DEL EFECTO: Transición suave */
+
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 /* AJUSTE DEL EFECTO HOVER */
@@ -433,6 +455,7 @@ body {
     border-color: #000000;
     color: white;
 }
+
 
 
 
