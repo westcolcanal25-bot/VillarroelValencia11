@@ -546,3 +546,12 @@ body {
 
 
 
+
+.store-container h2 { 
+    text-align: center; 
+    margin: 20px 0 15px 0; 
+    font-size: 24px; 
+    color: #333; 
+    padding: 0 10px; 
+    /* ASEGÚRATE DE QUE NO HAYA "white-space: nowrap;" AQUÍ */
+}
