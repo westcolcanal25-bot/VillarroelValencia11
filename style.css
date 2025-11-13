@@ -262,3 +262,128 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================== */
+/* ESTILOS DEL PIE DE PÁGINA (FOOTER) */
+/* =========================================== */
+.main-footer {
+    background-color: #333; /* Fondo gris oscuro */
+    color: white;
+    padding-top: 30px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las columnas se apilen en móvil */
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-col {
+    width: 100%; /* Ocupa todo el ancho en móvil */
+    margin-bottom: 25px;
+}
+
+.footer-heading {
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #4dc2f5; /* Color celeste para los títulos */
+}
+
+/* Estilos de la lista (Navegación) */
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-col ul li a,
+.footer-col-contact p a {
+    color: #ccc; /* Gris claro para los enlaces */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-col ul li a:hover,
+.footer-col-contact p a:hover {
+    color: #fff;
+}
+
+/* Estilos para Redes Sociales */
+.social-icons a {
+    display: inline-block;
+    color: white;
+    background-color: #555;
+    padding: 5px 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+/* Barra de derechos de autor (parte inferior) */
+.footer-bottom {
+    text-align: center;
+    padding: 15px 20px;
+    border-top: 1px solid #444; /* Línea separadora */
+    margin-top: 15px;
+    background-color: #222; /* Un gris más oscuro para la barra de abajo */
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.85em;
+    color: #aaa;
+}
+
+
+/* --- Media Query para Desktop --- */
+@media (min-width: 768px) {
+    .footer-col {
+        width: 30%; /* Tres columnas en desktop */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
