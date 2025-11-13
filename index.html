@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Villarroel Web</title>
-    <link rel="stylesheet" href="style.css"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Villarroel Web</title>
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
-    
+    <header class="navbar-header">
 <div class="top-anuncio-bar">
     <p class="anuncio-texto">FREE SHIPPING ON ORDERS $50+</p>
     <button class="anuncio-cerrar-btn" onclick="document.querySelector('.top-anuncio-bar').style.display='none'">
@@ -15,15 +15,16 @@
     </button>
 </div>
 
-<header class="main-header-bar">
-    <button class="menu-hamburguesa-btn">
-        <span class="linea"></span>
-        <span class="linea"></span>
-        <span class="linea"></span>
+<header class="navbar-header main-header-bar-villarroel">
+    
+    <button class="menu-button" id="menu-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
     </button>
     
     <div class="logo-container-nuevo">
-        <img src="img/feastables-logo.png" alt="Logo Feastables" class="logo-feastables">
+        <img src="img/Logo Feastables" alt="Logo Feastables" class="logo-feastables">
     </div>
 
     <a href="#" class="carrito-icon-link">
@@ -32,271 +33,294 @@
         </svg>
         <span class="contador-carrito">0</span>
     </a>
+    
+    <nav id="main-nav" class="nav-menu">
+        <ul>
+            <li><a href="">Productos Destacados</a></li>
+            <li><a href="#ofertas">Ofertas Exclusivas</a></li>
+            <li><a href="https://Wa.me/+584244492789?text=Hola,+me+gustaría+hacer+una+consulta">Consultar por WhatsApp</a></li>
+            <li><a href="#contacto">Ubicación y Contacto</a></li>
+        </ul>
+    </nav>
 </header>
-    <main class="store-container">
-        <h2>Nuestros Productos Destacados</h2>
-        <section class="product-grid">
-            <div class="product-card">
-                <a href="https://Wa.me/+584244492789?text=Hola+vengo+de+la+página+web+y+deseo+comprar" class="product-link">
-                    <div class="product-image-container">
-                        <img src="img/falda.jpg" alt="Mini falda de mezclilla cargo" class="product-image">
-                        <span class="discount-badge">-4%</span>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-name">Falda Shorts Xs a Xl</p>
-                        <div class="price-container">
-                            <span class="current-price">$20</span>
-                            <span class="original-price">$30</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="product-card">
-                <a href="https://Wa.me/+584244492789?text=Hola+vengo+de+la+página+web+y+deseo+comprar" class="product-link">
-                    <div class="product-image-container">
-                        <img src="img/pantalon.jpg" alt="Jeans de mezclilla estilo cargo" class="product-image">
-                        <span class="discount-badge">-15%</span>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-name">Jeans de Mezclilla Estilo Cargo (2 colores)</p>
-                        <div class="price-container">
-                            <span class="current-price">$20</span>
-                            <span class="original-price">$26</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="product-card">
-                <a href="https://Wa.me/+584244492789?text=Hola+vengo+de+la+página+web+y+deseo+comprar" class="product-link">
-                    <div class="product-image-container">
-                        <img src="img/bau2.png" alt="Descripción del producto 3" class="product-image">
-                        <span class="discount-badge">-10%</span>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-name">Camisas Unitallas</p>
-                        <div class="price-container">
-                            <span class="current-price">$10</span>
-                            <span class="original-price">$18</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="product-card">
-                <a href="https://Wa.me/+584244492789?text=Hola+vengo+de+la+página+web+y+deseo+comprar" class="product-link">
-                    <div class="product-image-container">
-                        <img src="img/bau.png" alt="Otro Artículo de Moda o Accesorio" class="product-image">
-                        <span class="discount-badge">-20%</span>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-name">Camisas Unitallas</p>
-                        <div class="price-container">
-                            <span class="current-price">$10</span>
-                            <span class="original-price">$23</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="product-card">
-                <a href="https://Wa.me/+584244492789?text=Hola+vengo+de+la+página+web+y+deseo+comprar" class="product-link">
-                    <div class="product-image-container">
-                        <img src="img/3.png" alt="Otro Artículo de Moda o Accesorio" class="product-image">
-                        <span class="discount-badge">-20%</span>
-                    </div>
-                    <div class="product-info">
-                        <p class="product-name">Camisas Unitallas</p>
-                        <div class="price-container">
-                            <span class="current-price">$10</span>
-                            <span class="original-price">$23</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="product-card">
-                <a href="https://Wa.me/+584244492789?text=Hola+vengo+de+la+página+web+y+deseo+comprar" class="product-link">
-                    <div class="product-image-container">
-                        <img src="img/be.png" alt="Otro Artículo de Moda o Accesorio" class="product-image">
-                    </div>
-                    <div class="product-info">
-                        <p class="product-name">Camisas Unitallas</p>
-                        <div class="price-container">
-                            <span class="current-price">$10</span>
-                            <span class="original-price">$23</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="product-card">
-                <a href="https://Wa.me/+584244492789?text=Hola+vengo+de+la+página+web+y+deseo+comprar" class="product-link">
-                    <div class="product-image-container">
-                        <img src="img/hello.png" alt="Otro Artículo de Moda o Accesorio" class="product-image">
-                    </div>
-                    <div class="product-info">
-                        <p class="product-name">Camisas Unitallas</p>
-                        <div class="price-container">
-                            <span class="current-price">$10</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="product-card">
-                <a href="https://Wa.me/+584244492789?text=Hola+vengo+de+la+página+web+y+deseo+comprar" class="product-link">
-                    <div class="product-image-container">
-                        <img src="img/46.png" alt="Otro Artículo de Moda o Accesorio" class="product-image">
-                    </div>
-                    <div class="product-info">
-                        <p class="product-name">Camisas Unitallas</p>
-                        <div class="price-container">
-                            <span class="current-price">$10</span>
-                            <span class="original-price">$23</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="product-card">
-                <a href="https://Wa.me/+584244492789?text=Hola+vengo+de+la+página+web+y+deseo+comprar" class="product-link">
-                    <div class="product-image-container">
-                        <img src="img/che.png" alt="Otro Artículo de Moda o Accesorio" class="product-image">
-                    </div>
-                    <div class="product-info">
-                        <p class="product-name">Camisas Unitallas</p>
-                        <div class="price-container">
-                            <span class="current-price">$10</span>
-                            <span class="original-price">$23</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="product-card">
-                <a href="https://Wa.me/+584244492789?text=Hola+vengo+de+la+página+web+y+deseo+comprar" class="product-link">
-                    <div class="product-image-container">
-                        <img src="img/ink.png" alt="Otro Artículo de Moda o Accesorio" class="product-image">
-                    </div>
-                    <div class="product-info">
-                        <p class="product-name">Camisas Unitallas</p>
-                        <div class="price-container">
-                            <span class="current-price">$10</span>
-                            <span class="original-price">$23</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="product-card">
-                <a href="https://Wa.me/+584244492789?text=Hola+vengo+de+la+página+web+y+deseo+comprar" class="product-link">
-                    <div class="product-image-container">
-                        <img src="img/kit.png" alt="Otro Artículo de Moda o Accesorio" class="product-image">
-                    </div>
-                    <div class="product-info">
-                        <p class="product-name">Camisas Unitallas</p>
-                        <div class="price-container">
-                            <span class="current-price">$10</span>
-                            <span class="original-price">$23</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="product-card">
-                <a href="https://Wa.me/+584244492789?text=Hola+vengo+de+la+página+web+y+deseo+comprar" class="product-link">
-                    <div class="product-image-container">
-                        <img src="img/del.png" alt="Otro Artículo de Moda o Accesorio" class="product-image">
-                    </div>
-                    <div class="product-info">
-                        <p class="product-name">Camisas Unitallas</p>
-                        <div class="price-container">
-                            <span class="current-price">$10</span>
-                            <span class="original-price">$23</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="product-card">
-                <a href="https://Wa.me/+584244492789?text=Hola+vengo+de+la+página+web+y+deseo+comprar" class="product-link">
-                    <div class="product-image-container">
-                        <img src="img/ja.png" alt="Otro Artículo de Moda o Accesorio" class="product-image">
-                    </div>
-                    <div class="product-info">
-                        <p class="product-name">Camisas Unitallas</p>
-                        <div class="price-container">
-                            <span class="current-price">$10</span>
-                            <span class="original-price">$23</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="product-card">
-                <a href="https://Wa.me/+584244492789?text=Hola+vengo+de+la+página+web+y+deseo+comprar" class="product-link">
-                    <div class="product-image-container">
-                        <img src="img/falto.png" alt="Otro Artículo de Moda o Accesorio" class="product-image">
-                    </div>
-                    <div class="product-info">
-                        <p class="product-name">Camisas Unitallas</p>
-                        <div class="price-container">
-                            <span class="current-price">$10</span>
-                            <span class="original-price">$23</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="product-card">
-                <a href="https://Wa.me/+584244492789?text=Hola+vengo+de+la+página+web+y+deseo+comprar" class="product-link">
-                    <div class="product-image-container">
-                        <img src="img/pan.png" alt="Otro Artículo de Moda o Accesorio" class="product-image">
-                    </div>
-                    <div class="product-info">
-                        <p class="product-name">Camisas Unitallas</p>
-                        <div class="price-container">
-                            <span class="current-price">$10</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="product-card">
-                <a href="https://Wa.me/+584244492789?text=Hola+vengo+de+la+página+web+y+deseo+comprar" class="product-link">
-                    <div class="product-image-container">
-                        <img src="img/cora.png" alt="Otro Artículo de Moda o Accesorio" class="product-image">
-                    </div>
-                    <div class="product-info">
-                        <p class="product-name">Camisas Unitallas</p>
-                        <div class="price-container">
-                            <span class="current-price">$10</span>
-                            <span class="original-price">$23</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="product-card">
-                <a href="https://Wa.me/+584244492789?text=Hola+vengo+de+la+página+web+y+deseo+comprar" class="product-link">
-                    <div class="product-image-container">
-                        <img src="img/brillo.png" alt="Otro Artículo de Moda o Accesorio" class="product-image">
-                    </div>
-                    <div class="product-info">
-                        <p class="product-name">Camisas Unitallas</p>
-                        <div class="price-container">
-                            <span class="current-price">$10</span>
-                            <span class="original-price">$23</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            
-        </section>
-    </main>
-    
-    <script src="script.js"></script>
+    <main class="store-container">
+        <h2>Nuestros Productos Destacadosssssssss</h2>
+        <section class="product-grid">
+            <div class="product-card">
+                <a href="https://Wa.me/+584244492789?text=Hola+vengo+de+la+página+web+y+deseo+comprar" class="product-link">
+                    <div class="product-image-container">
+                        <img src="img/falda.jpg" alt="Mini falda de mezclilla cargo" class="product-image">
+                        <span class="discount-badge">-4%</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-name">Falda Shorts Xs a Xl</p>
+                        <div class="price-container">
+                            <span class="current-price">$20</span>
+                            <span class="original-price">$30</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="product-card">
+                <a href="https://Wa.me/+584244492789?text=Hola+vengo+de+la+página+web+y+deseo+comprar" class="product-link">
+                    <div class="product-image-container">
+                        <img src="img/pantalon.jpg" alt="Jeans de mezclilla estilo cargo" class="product-image">
+                        <span class="discount-badge">-15%</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-name">Jeans de Mezclilla Estilo Cargo (2 colores)</p>
+                        <div class="price-container">
+                            <span class="current-price">$20</span>
+                            <span class="original-price">$26</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="product-card">
+                <a href="https://Wa.me/+584244492789?text=Hola+vengo+de+la+página+web+y+deseo+comprar" class="product-link">
+                    <div class="product-image-container">
+                        <img src="img/bau2.png" alt="Descripción del producto 3" class="product-image">
+                        <span class="discount-badge">-10%</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-name">Camisas Unitallas</p>
+                        <div class="price-container">
+                            <span class="current-price">$10</span>
+                            <span class="original-price">$18</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="product-card">
+                <a href="https://Wa.me/+584244492789?text=Hola+vengo+de+la+página+web+y+deseo+comprar" class="product-link">
+                    <div class="product-image-container">
+                        <img src="img/bau.png" alt="Otro Artículo de Moda o Accesorio" class="product-image">
+                        <span class="discount-badge">-20%</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-name">Camisas Unitallas</p>
+                        <div class="price-container">
+                            <span class="current-price">$10</span>
+                            <span class="original-price">$23</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="product-card">
+                <a href="https://Wa.me/+584244492789?text=Hola+vengo+de+la+página+web+y+deseo+comprar" class="product-link">
+                    <div class="product-image-container">
+                        <img src="img/3.png" alt="Otro Artículo de Moda o Accesorio" class="product-image">
+                        <span class="discount-badge">-20%</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-name">Camisas Unitallas</p>
+                        <div class="price-container">
+                            <span class="current-price">$10</span>
+                            <span class="original-price">$23</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="product-card">
+                <a href="https://Wa.me/+584244492789?text=Hola+vengo+de+la+página+web+y+deseo+comprar" class="product-link">
+                    <div class="product-image-container">
+                        <img src="img/be.png" alt="Otro Artículo de Moda o Accesorio" class="product-image">
+                        <span class="discount-badge">-20%</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-name">Camisas Unitallas</p>
+                        <div class="price-container">
+                            <span class="current-price">$10</span>
+                            <span class="original-price">$23</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="product-card">
+                <a href="https://Wa.me/+584244492789?text=Hola+vengo+de+la+página+web+y+deseo+comprar" class="product-link">
+                    <div class="product-image-container">
+                        <img src="img/hello.png" alt="Otro Artículo de Moda o Accesorio" class="product-image">
+                        <span class="discount-badge">-20%</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-name">Camisas Unitallas</p>
+                        <div class="price-container">
+                            <span class="current-price">$10</span>
+                            <span class="original-price">$23</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="product-card">
+                <a href="https://Wa.me/+584244492789?text=Hola+vengo+de+la+página+web+y+deseo+comprar" class="product-link">
+                    <div class="product-image-container">
+                        <img src="img/46.png" alt="Otro Artículo de Moda o Accesorio" class="product-image">
+                        <span class="discount-badge">-20%</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-name">Camisas Unitallas</p>
+                        <div class="price-container">
+                            <span class="current-price">$10</span>
+                            <span class="original-price">$23</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="product-card">
+                <a href="https://Wa.me/+584244492789?text=Hola+vengo+de+la+página+web+y+deseo+comprar" class="product-link">
+                    <div class="product-image-container">
+                        <img src="img/che.png" alt="Otro Artículo de Moda o Accesorio" class="product-image">
+                        <span class="discount-badge">-20%</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-name">Camisas Unitallas</p>
+                        <div class="price-container">
+                            <span class="current-price">$10</span>
+                            <span class="original-price">$23</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="product-card">
+                <a href="https://Wa.me/+584244492789?text=Hola+vengo+de+la+página+web+y+deseo+comprar" class="product-link">
+                    <div class="product-image-container">
+                        <img src="img/ink.png" alt="Otro Artículo de Moda o Accesorio" class="product-image">
+                        <span class="discount-badge">-20%</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-name">Camisas Unitallas</p>
+                        <div class="price-container">
+                            <span class="current-price">$10</span>
+                            <span class="original-price">$23</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="product-card">
+                <a href="https://Wa.me/+584244492789?text=Hola+vengo+de+la+página+web+y+deseo+comprar" class="product-link">
+                    <div class="product-image-container">
+                        <img src="img/kit.png" alt="Otro Artículo de Moda o Accesorio" class="product-image">
+                        <span class="discount-badge">-20%</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-name">Camisas Unitallas</p>
+                        <div class="price-container">
+                            <span class="current-price">$10</span>
+                            <span class="original-price">$23</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="product-card">
+                <a href="https://Wa.me/+584244492789?text=Hola+vengo+de+la+página+web+y+deseo+comprar" class="product-link">
+                    <div class="product-image-container">
+                        <img src="img/del.png" alt="Otro Artículo de Moda o Accesorio" class="product-image">
+                        <span class="discount-badge">-20%</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-name">Camisas Unitallas</p>
+                        <div class="price-container">
+                            <span class="current-price">$10</span>
+                            <span class="original-price">$23</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="product-card">
+                <a href="https://Wa.me/+584244492789?text=Hola+vengo+de+la+página+web+y+deseo+comprar" class="product-link">
+                    <div class="product-image-container">
+                        <img src="img/ja.png" alt="Otro Artículo de Moda o Accesorio" class="product-image">
+                        <span class="discount-badge">-20%</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-name">Camisas Unitallas</p>
+                        <div class="price-container">
+                            <span class="current-price">$10</span>
+                            <span class="original-price">$23</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="product-card">
+                <a href="https://Wa.me/+584244492789?text=Hola+vengo+de+la+página+web+y+deseo+comprar" class="product-link">
+                    <div class="product-image-container">
+                        <img src="img/falto.png" alt="Otro Artículo de Moda o Accesorio" class="product-image">
+                        <span class="discount-badge">-20%</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-name">Camisas Unitallas</p>
+                        <div class="price-container">
+                            <span class="current-price">$10</span>
+                            <span class="original-price">$23</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="product-card">
+                <a href="https://Wa.me/+584244492789?text=Hola+vengo+de+la+página+web+y+deseo+comprar" class="product-link">
+                    <div class="product-image-container">
+                        <img src="img/pan.png" alt="Otro Artículo de Moda o Accesorio" class="product-image">
+                        <span class="discount-badge">-20%</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-name">Camisas Unitallas</p>
+                        <div class="price-container">
+                            <span class="current-price">$10</span>
+                            <span class="original-price">$23</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="product-card">
+                <a href="https://Wa.me/+584244492789?text=Hola+vengo+de+la+página+web+y+deseo+comprar" class="product-link">
+                    <div class="product-image-container">
+                        <img src="img/cora.png" alt="Otro Artículo de Moda o Accesorio" class="product-image">
+                        <span class="discount-badge">-20%</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-name">Camisas Unitallas</p>
+                        <div class="price-container">
+                            <span class="current-price">$10</span>
+                            <span class="original-price">$23</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="product-card">
+                <a href="https://Wa.me/+584244492789?text=Hola+vengo+de+la+página+web+y+deseo+comprar" class="product-link">
+                    <div class="product-image-container">
+                        <img src="img/brillo.png" alt="Otro Artículo de Moda o Accesorio" class="product-image">
+                        <span class="discount-badge">-20%</span>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-name">Camisas Unitallas</p>
+                        <div class="price-container">
+                            <span class="current-price">$10</span>
+                            <span class="original-price">$23</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+        </section>
+    </main>
+    
+    <script src="script.js"></script>
 </body>
 </html>
