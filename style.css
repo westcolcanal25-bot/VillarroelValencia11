@@ -6,23 +6,30 @@ body {
     padding-top: 65px; 
 }
 
-/* * 2. ESTILOS DEL ENCABEZADO (NAVBAR) - FIJO */
-.navbar-header {
+/* NUEVO: ESTILOS DE LA BARRA PRINCIPAL (CELÉSTE) */
+.main-header-bar-villarroel {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 20px;
-    background-color: #fff;
-    border-bottom: 1px solid #ccc;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    height: 45px; /* Altura de contenido */
     width: 100%;
-
-    /* CLAVE: Fija el encabezado al tope */
-    position: fixed; 
-    top: 0;
+    height: 70px; /* Altura del nav principal */
+    background-color: #4dc2f5; /* Color Celeste */
+    padding: 0 15px;
+    
+    /* POSICIÓN FIJA (Aseguramos que esté debajo de la barra morada) */
+    position: fixed;
+    top: 30px; /* Debajo de la barra morada de 30px */
     left: 0;
-    z-index: 20; 
+    
+    /* Z-INDEX ALTO (Importante) */
+    z-index: 20;
+}
+
+/* Y ASEGURA que el menú botón esté por encima de esto */
+.menu-button {
+    /* ... (resto del CSS) ... */
+    z-index: 1000; /* ¡MUY ALTO para asegurar el clic! */
+    position: relative; /* Necesario para que el z-index funcione */
 }
 
 .logo-container { display: flex; align-items: center; }
@@ -169,6 +176,7 @@ body {
     height: calc(100vh - 100px); 
     overflow-y: auto; /* Permite scroll si la lista es larga */
 }
+
 
 
 
