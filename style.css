@@ -547,11 +547,18 @@ body {
 
 
 
-.store-container h2 { 
-    text-align: center; 
-    margin: 20px 0 15px 0; 
-    font-size: 24px; 
-    color: #333; 
-    padding: 0 10px; 
-    /* ASEGÚRATE DE QUE NO HAYA "white-space: nowrap;" AQUÍ */
+.store-container h2 {
+    /* Nueva fuente y estilo */
+    font-family: 'Poppins', sans-serif; /* CLAVE: Aplica la nueva fuente */
+    font-weight: 800; /* Hace la fuente más gruesa y destacada */
+    text-transform: uppercase; /* Opcional: para que se vea más audaz */
+    line-height: 1.1; /* Reduce el espacio entre las dos líneas */
+    
+    /* Propiedades de centrado que ya tenías */
+    text-align: center;
+    margin: 20px 0 30px 0; /* Agregamos más margen abajo */
+    font-size: 28px; /* Un poco más grande para destacar */
+    color: #333;
+    padding: 0 10px;
 }
+
