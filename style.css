@@ -114,7 +114,7 @@ body {
 
 .logo-feastables {
     /* Ajusta la altura máxima para que la imagen se vea bien en la barra de 70px */
-    max-height: 900%; 
+    max-height: 1000%; 
     /* El logo es ancho, limitamos su ancho máximo para que quepa en móviles */
     max-width: 250px; 
     width: auto;
@@ -246,6 +246,7 @@ body {
     .menu-button { display: none; }
     .nav-menu, .nav-menu.open { max-height: 0 !important; overflow: hidden !important; }
 }
+
 
 
 
