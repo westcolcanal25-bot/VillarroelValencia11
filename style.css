@@ -477,41 +477,49 @@ body {
 
 
 /* =========================================== */
-/* ESTILOS DEL BOTÓN DE WHATSAPP FLOTANTE */
+/* ESTILOS DEL BOTÓN DE WHATSAPP FLOTANTE - ¡EFECTO MEJORADO! */
 /* =========================================== */
 .whatsapp-float {
-    position: fixed; /* CLAVE: Para que flote y se mantenga visible al hacer scroll */
+    position: fixed;
     width: 60px;
     height: 60px;
-    bottom: 20px; /* Distancia desde abajo */
-    right: 20px; /* Distancia desde la derecha */
-    background-color: #25d366; /* Color verde oficial de WhatsApp */
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366; 
     color: #FFF;
-    border-radius: 50px; /* Forma circular */
+    border-radius: 50px;
     text-align: center;
     font-size: 30px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.3); /* Sombra para que resalte */
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
-    display: flex; /* Para centrar el icono dentro del círculo */
+    
+    /* Sombra Inicial para que destaque siempre */
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.4); 
+    
+    z-index: 1000;
+    display: flex;
     justify-content: center;
     align-items: center;
-    text-decoration: none; /* Quita el subrayado del enlace */
+    text-decoration: none;
     
-    /* Efecto de movimiento al pasar el mouse */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    /* Transición más detallada para todos los efectos */
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Transición suave y elástica */
 }
 
 .whatsapp-float:hover {
-    transform: scale(1.1) translateY(-5px); /* Un poco más grande y sube ligeramente */
-    box-shadow: 4px 4px 15px rgba(0,0,0,0.4); /* Sombra más pronunciada al hacer hover */
+    /* EFECTO DE MOVIMIENTO Y SOMBRA AL PASAR EL MOUSE */
+    transform: scale(1.15) translateY(-8px); /* Más grande y sube más */
+    
+    /* Sombra más grande y más pronunciada, como si "flotara" más alto */
+    box-shadow: 0px 12px 25px rgba(0,0,0,0.5); 
+    
+    background-color: #2fb960; /* Ligeramente más claro al hacer hover */
 }
 
 /* Ajuste para dispositivos móviles si la barra inferior interfiere */
 @media (max-width: 767px) {
     .whatsapp-float {
-        bottom: 75px; /* Sube el botón para que no se superponga con la barra de navegación inferior (bottom-nav) */
+        bottom: 75px; 
         right: 15px;
-        width: 55px; /* Un poco más pequeño en móviles */
+        width: 55px; 
         height: 55px;
         font-size: 28px;
     }
