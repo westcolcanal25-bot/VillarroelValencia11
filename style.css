@@ -110,18 +110,29 @@ body {
 .nav-item.active { color: #007bff; font-weight: bold; }
 
 
-/* -------------------------------------------------------------------------- */
-/* ✨ MEDIA QUERY: OPTIMIZACIÓN Y MEJOR DISEÑO PARA PC (min-width: 768px) ✨ */
-/* -------------------------------------------------------------------------- */
+/* * 3. MENÚ HAMBURGUESA - Visibilidad y Acceso */
+.menu-button {
+    /* Esto lo devuelve a su lugar a la izquierda, por encima de todo */
+    position: relative; /* O position: absolute; si lo sacaste del flujo */
+    z-index: 25; /* ¡CLAVE! Asegura que sea clicable y esté por encima del logo y la barra */
+    
+    /* Aseguramos que se muestre en móvil */
+    display: flex; 
+    width: 30px; /* Asegura un área de clic decente */
+    height: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0;
+}
+
+/* En la media query para PC, debe estar oculto si quieres el comportamiento solo en móvil: */
 @media (min-width: 768px) {
-    .product-grid { grid-template-columns: repeat(3, 1fr); }
-    .product-card { padding: 8px; border-right: 1px solid #eee; }
-    .product-card:nth-child(2n) { border-right: 1px solid #eee; }
-    .product-card:nth-child(3n) { border-right: none; }
-    .bottom-nav { display: none; }
-    /* Ocultar la hamburguesa y menú desplegable en PC */
-    .menu-button { display: none; }
-    .nav-menu, .nav-menu.open { max-height: 0 !important; overflow: hidden !important; }
+    .menu-button { 
+        display: none; 
+    }
 }
 
 /* 1. Resetear el logo (Tu imagen del logo estaba siendo tratada como texto) */
@@ -158,5 +169,6 @@ body {
     height: calc(100vh - 100px); 
     overflow-y: auto; /* Permite scroll si la lista es larga */
 }
+
 
 
