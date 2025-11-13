@@ -476,50 +476,25 @@ body {
 
 
 
-/* =========================================== */
-/* ESTILOS DEL BOTÓN DE WHATSAPP FLOTANTE - ¡APLICACIÓN FORZADA! */
-/* =========================================== */
-.whatsapp-float {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25d366; 
-    color: #FFF;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 30px;
-    
-    /* Sombra Inicial para que destaque siempre */
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.4); 
-    
-    z-index: 9999 !important; /* Aseguramos la capa de apilamiento más alta */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    
-    /* CLAVE: Transición debe estar en el estado normal */
-    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important; 
-}
-
+/* ESTO ES LO QUE DEBES TENER PARA QUE EL EFECTO SE ACTIVE AL PASAR EL CURSOR: */
 .whatsapp-float:hover {
-    /* MOVIMIENTO FORZADO */
-    transform: scale(1.15) translateY(-8px) !important; /* Más grande y sube más */
-    
-    /* SOMBRA FORZADA */
-    box-shadow: 0px 12px 25px rgba(0,0,0,0.5) !important; 
-    
-    background-color: #2fb960 !important; /* Ligeramente más claro al hacer hover */
+    /* Aquí va el código del movimiento y sombra */
+    transform: scale(1.15) translateY(-8px) !important;
+    box-shadow: 0px 12px 25px rgba(0,0,0,0.5) !important;
+    background-color: #2fb960 !important;
+}
+/* -------------------------------------------------------------------------- */
+
+
+/* ASEGÚRATE DE QUE NO TENGAS NINGUNO DE ESTOS SELECTORES CON EL EFECTO: */
+.whatsapp-float:active {
+    /* SI EL CÓDIGO DEL MOVIMIENTO ESTÁ AQUÍ, ELIMÍNALO Y PONLO EN :hover */
 }
 
-/* Ajuste para dispositivos móviles (mantenido) */
-@media (max-width: 767px) {
-    .whatsapp-float {
-        bottom: 75px; 
-    }
+.whatsapp-float:focus {
+    /* SI EL CÓDIGO DEL MOVIMIENTO ESTÁ AQUÍ, ELIMÍNALO Y PONLO EN :hover */
 }
+
 
 
 
