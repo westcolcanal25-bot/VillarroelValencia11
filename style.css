@@ -113,8 +113,9 @@ body {
 }
 
 .logo-feastables {
-    max-height: 80%; 
-    width: auto;
+    max-height: 80%; /* Altura máxima en relación con la barra */
+    max-width: 180px; /* Ejemplo: un ancho máximo fijo si es muy grande */
+    width: auto;      /* Mantener la proporción si el ancho es menor que max-width */
 }
 
 .carrito-icon-link {
@@ -243,5 +244,6 @@ body {
     .menu-button { display: none; }
     .nav-menu, .nav-menu.open { max-height: 0 !important; overflow: hidden !important; }
 }
+
 
 
